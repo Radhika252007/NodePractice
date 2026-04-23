@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employees with their Full Name and Department</h1>
+    <% employees.forEach((emp)=>{ %>
+            <li>Full Name: <%=emp.firstName + " "+ emp.lastName%></li>
+            <li>Department: <%=emp.department%></li>
+            <br>
+    <% }) %>
+
+    <h1>Employees with status Active</h1>
+    <% const activeEmployees = employees.filter(emp => emp.status === 'Active'); %>
+    <% activeEmployees.forEach((emp)=>{ %>
+            <li>Full Name: <%=emp.firstName + " "+ emp.lastName%></li>
+            <li>Department: <%=emp.department%></li>
+            <br>
+    <% }) %>
+
+
+    <h1>Female Employees</h1>
+    <% const femaleEmployees = employees.filter(emp =>  emp.gender === 'Female'); %>
+    <% femaleEmployees.forEach((emp) => { %>
+
+            <li>Full Name: <%= emp.firstName + " "+ emp.lastName%> </li>
+            <li>Department: <%= emp.department%></li>
+        <br>
+    <% }) %>
+
+    <h1>Male Employees</h1>
+    <% const maleEmployees = employees.filter(emp =>  emp.gender === 'Male'); %>
+    <% maleEmployees.forEach((emp) => { %>
+            <li>Full Name: <%= emp.firstName + " "+ emp.lastName%> </li>
+            <li>Department: <%= emp.department%></li>
+            <br>
+    <% }) %>
+
+    <h1>Employee Details with Id <%= employee.id %></h1>
+        <li>Full Name: <%= employee.firstName + " " + employee.lastName %></li>
+        <li>Department: <%= employee.department %></li>
+        <li>Gender: <%= employee.gender %></li>
+        <li>Status: <%= employee.status %></li>
+        <br>
+
+    <h1>Employees in Engineering Department</h1>
+    <% const engineeringEmployees = employees.filter(emp => emp.department === 'Engineering'); %>
+    <% engineeringEmployees.forEach((emp) => { %>
+            <li>Full Name: <%= emp.firstName + " "+ emp.lastName%> </li>
+            <li>Department: <%= emp.department%></li>
+            <br>
+    <% }) %>
+
+
+    <h1>Employees with workMode 'Remote'</h1>
+    <% const remoteEmployees = employees.filter(emp => emp.workMode === 'Remote'); %>
+    <% remoteEmployees.forEach((emp) => { %>
+
+            <li>Full Name: <%= emp.firstName + " "+ emp.lastName%> </li>
+            <li>Department: <%= emp.department%></li>
+            <br>
+    <% }) %>
+
+    <h1>Employees with employmentType 'Full-time'</h1>
+    <% const fullTimeEmployees = employees.filter(emp => emp.employmentType === 'Full-time'); %>
+    <% fullTimeEmployees.forEach((emp) => { %>
+            <li>Full Name: <%= emp.firstName + " "+ emp.lastName%> </li>
+            <li>Department: <%= emp.department%></li>
+            <br>
+    <% }) %>
+
+    
+
+
+
+
+
+</body>
+</html>
